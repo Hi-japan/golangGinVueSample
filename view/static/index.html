@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>メモアプリ</title>
+
+        <link rel="stylesheet" type="text/css" href="/view/css/memo.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js" defer></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+        <script src="/view/js/vueMemo.js" defer></script>
+    </head>
+    <body>
+        <div id="app">
+            <section class="hero is-primary">
+                <div class="hero-body">
+                  <div class="container">
+                    <h1 class="title">
+                      メモアプリ
+                    </h1>
+                    <h2 class="subtitle">
+                      <span>{{ userName }}</span>
+                      <span> 様のメモ</span>
+                    </h2>
+                  </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="container">
+                    <h1 class="title is-5">メモ一覧</h1>
+                    <p class="title is-5">メモ：<input type="text" class="input is-rounded" name='productMemo' v-model="productMemo" v-bind:class="{'alert-color': !validate }"　value='' size="70" placeholder="メモを入力"></p>
+                    <button v-on:click="doAddMemo" v-bind:disabled="!isEntered" class="button is-primary" style="margin-bottom: 0.9rem;">
+                        追加
+                    </button>
+                <div>
+                <div class="container">
+                    <table class="table is-striped">
+                        <thead v-pre>
+                            <tr>
+                                <th class="index title is-6">No</th>
+                                <th class="memo title is-5">メモ</th>
+                                <th class="deleteMemo"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item, index) in computedMemos">
+                                <td class="index">{{ index + 1 }}</td>
+                                <td class="memo">{{ item.memo }}</td>
+                                <td class="deleteMemo">
+                                    <button v-on:click="doDeleteMemo(item)" class="button  is-warning is-light is-rounded">
+                                        削除
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <hr>
+        </div>
+    </body>
+</html>

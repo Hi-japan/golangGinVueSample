@@ -1,0 +1,54 @@
+body { 
+    font-size: 14px;
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 15px; 
+}
+
+.alert-color {
+    border-color: #ff0000;
+    width: 90%;
+}
+table {
+    border-collapse: collapse;
+    width: 100%; 
+}
+thead, tbody {
+    width: 100%; 
+}
+tbody {
+    width: 100%; 
+    overflow-x: hidden;
+}
+th,td {
+    padding: 0 8px;
+    line-height: 40px;
+}
+thead th {
+    background-color: #ffefe5;
+}
+th.index, td.index {
+    width: 15%;
+}
+th.name, td.name {
+    width: 100px;
+}
+td.memo {
+    
+    width: 60%;
+    word-break : break-all;
+}
+th.memo {
+    width: 70%;
+}
+th.state, td.state {
+    width: 70px;
+    text-align: center;
+}
+th.deleteMemo, td.deleteMemo {
+    width: 10%;
+    text-align: center;
+}
+tbody tr:hover td {
+    background: #ccffff;
+}
