@@ -6,7 +6,7 @@
 バックエンド: Go/Gin  
 DB: PostgreSQL  
 で作成したメモアプリサンプルを動かしてみました。  
-Googleアカウントでログインすることで、アカウントごとのメモを書き込むことができます。  
+Googleアカウントでログインすることで、アカウントごとにメモを書き込み保存ができます。  
 
 以下のページが動作サンプルになります。  
 https://golangginvuesample2.herokuapp.com/memoapp/login.html  
