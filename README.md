@@ -8,5 +8,5 @@ DB: PostgreSQL
 で作成したメモアプリサンプルを動かしてみました。
 Googleアカウントでログインすることで、アカウントごとのメモを書き込むことができます。
 
-以下のページが動作サンプルになります。
+以下のページが動作サンプルになります。  
 https://golangginvuesample2.herokuapp.com/memoapp/login.html
